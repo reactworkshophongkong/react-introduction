@@ -1,5 +1,0 @@
-const MemoryGame = () => {
-
-}
-
-export { MemoryGame }
