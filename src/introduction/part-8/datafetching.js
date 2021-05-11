@@ -5,14 +5,13 @@ import axios from 'axios'
 // https://jsonplaceholder.typicode.com/guide/
 
 const PostsAndComments = () => {
-  // can have state with value "posts" or "comments" to control what to display posts or comments
-  // const [view, setView] = useState('posts')
   // we can have some state to track which post we are viewing comments for
-  // const [postId, setPostId] = useState(1)
+  // const [selectedPost, setSelectedPos] = useState(1)
+  // selected post can be passed into Comments component
 
   return (
     <div>
-      {/* we should <Posts /> or <Comments /> */}
+      {/* can use a two column layout with Posts and Comments */}
     </div>
   )
 }
@@ -27,7 +26,7 @@ const Posts = () => {
 
   // we create a section for each Post from the results
   // we should display post.body, post.title and a button to show comments
-  // we should have a click handler that changes the view  state in PostsAndComments to comments when clicked, and set the postId
+  // we should have a click handler that sets the selectedPost
 
 
   return (
@@ -39,7 +38,7 @@ const Posts = () => {
 
 const Comments = props => {
   // set some state for the comments
-  // const [posts, setPosts] = useState([])
+  // const [comments, setComments] = useState([])
 
 
   // in useEffect hook
