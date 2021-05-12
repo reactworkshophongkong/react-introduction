@@ -28,3 +28,13 @@ code {
   justify-content: center;
   align-items: center;
 }
+
+.input {
+  padding: 10px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input:focus {
+  border: 3px solid blue;
+}
