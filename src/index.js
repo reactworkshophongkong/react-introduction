@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import App from './hooks/App'
+import App1 from './introduction/part-1/App'
+import App2 from './introduction/part-2/App'
+import App3 from './introduction/part-3/App'
+import App4 from './introduction/part-4/App'
+import App5 from './introduction/part-5/App'
+import App6 from './introduction/part-6/App'
+// import App7 from './introduction/part-7/App'
+// import App8 from './introduction/part-8/App'
+import { Hangman } from './exercises/solutions/hangman'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Hangman />
   </React.StrictMode>,
   document.getElementById('root')
 );

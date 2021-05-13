@@ -28,7 +28,6 @@ class SquareClass extends React.Component {
   shapeName = "Square"
 
   render() {
-
     console.log('shapeName = ' + this.shapeName)
     const styles = {
       width: '50px',

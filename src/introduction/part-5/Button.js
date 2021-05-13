@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 // Lets refactor Button so now the label is configurable, can use a prop or props.children
 // This is an exercise
 const ButtonExample = props => {
@@ -5,14 +7,14 @@ const ButtonExample = props => {
 
   const handleClick = event => {
     console.log(event)
-    // the event should now be configurable and defined by the parent
+    // the behaviour should now be configurable and defined by the parent
   }
 
   return (
     <div>
       <h1>Function component</h1>
       <h2>{value}</h2>
-      <button onClick={handleClick}>This should be dyanmic and passed from parent</button>
+      <button onClick={handleClick}>Configurable Label</button>
     </div>
   )
 }

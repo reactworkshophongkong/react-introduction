@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Square = props => {
-  console.log(props)
+  console.log('props', props)
 
   const styles = {
     width: '50px',
