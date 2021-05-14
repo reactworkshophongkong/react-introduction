@@ -45,8 +45,11 @@ const DataFetching = () => {
 
   return (
     <div>
-      {post && <h1>{post.title}</h1>}
-      {post && <p>{post.body}</p>}
+      <h1>with Functional Component</h1>
+      <div>
+        {post && <h3>Post 1 {post.title}</h3>}
+        {post && <p>{post.body}</p>}
+      </div>
     </div>
   )
 }
@@ -54,11 +57,58 @@ const DataFetching = () => {
 // Exercise write the class component version
 // data fetching is done in the 
 class DataFetchingClass extends React.Component {
+  state = {
+    post: null
+  }
+
+  fetchPosts = async () => {
+    try {
+      const result = await axios.get('https://jsonplaceholder.typicode.com/posts/2')
+      this.setState({
+        post: result.data
+      })
+
+    } catch(error) {
+      console.log(error)
+    }
+  }
 
   componentDidMount() {
     // data fetching should be done here
+    this.fetchPosts()
+  }
+
+  render() {
+    const { post } = this.state
+    console.log('inside class', post)
+    return (
+      <div>
+      <h1>with Class Component</h1>
+        <div>
+          {post && <h3>Post 2 {post.title}</h3>}
+          {post && <p>{post.body}</p>}
+        </div>
+      </div>
+    )
   }
 
 }
 
 export { DataFetching, DataFetchingClass }
+
+/*
+
+"fetch.then(response => response.JSON())
+.then(data => do something)
+
+const result = await fetch...
+const data = await result.JSON()
+
+fetch(url, { method: 'POST' , body: JSON.stringify() , headers: {'Content-Type': 'application/json' }}
+
+url
+method
+headers
+
+query params vs body"
+*/
