@@ -1,4 +1,4 @@
-// sharing logic eample
+// sharing logic example
 // Exercise instead of using render props use children instead to share the logic in class component
 
 

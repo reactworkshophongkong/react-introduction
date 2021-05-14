@@ -7,14 +7,15 @@ import App3 from './introduction/part-3/App'
 import App4 from './introduction/part-4/App'
 import App5 from './introduction/part-5/App'
 import App6 from './introduction/part-6/App'
-// import App7 from './introduction/part-7/App'
-// import App8 from './introduction/part-8/App'
-import { Hangman } from './exercises/solutions/hangman'
+import { Hangman } from './exercises/hangman'
+import App7 from './introduction/part-7/App'
+import App8 from './introduction/part-8/App'
+import AppHooks from './hooks/App'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Hangman />
+    <AppHooks />
   </React.StrictMode>,
   document.getElementById('root')
 );

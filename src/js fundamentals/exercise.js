@@ -29,9 +29,9 @@ function responseWithObjectMissingValue(){
 // Example 3
 // with default values
 // const { id, date, person: { name, job }} = responseWithObjectMissingValue()
-// const { id = "default-id", date, person: { name = "default name", job } = {}} = responseWithObjectMissingValue()
+const { id = "default-id", date, person: { name = "default name", job } = {}} = responseWithObjectMissingValue()
 
-// console.log(`id=${id} name=${name} job=${job} date=${date}`)
+console.log(`id=${id} name=${name} job=${job} date=${date}`)
 
 
 // Example 4
@@ -67,35 +67,35 @@ function responseWithObjectMissingValue(){
 
 // Example 1
 // no braces for single param
-const singleParam = x => {
-  return x + 2
-}
+// const singleParam = x => {
+//   return x + 2
+// }
 // console.log(singleParam(5))
 
 
 // Example 2
 // braces when 2 or more params
-const multipleParams = (a,b,c) => {
-  return a + b + c
-}
+// const multipleParams = (a,b,c) => {
+//   return a + b + c
+// }
 // console.log(multipleParams(1,2,3))
 
 
 // Example 3
 // implict return
-const implictReturn = () => "hello"
+// const implictReturn = () => "hello"
 // console.log(implictReturn())
 
 
 // Example 4
 // if the function does not just contain a single expression we use braces
-const withBraces = () => {
-  if (Math.random() > 0.5) {
-    return "Big"
-  }
+// const withBraces = () => {
+//   if (Math.random() > 0.5) {
+//     return "Big"
+//   }
 
-  return "Small"
-}
+//   return "Small"
+// }
 // console.log(withBraces())
 
 
@@ -132,11 +132,11 @@ const withBraces = () => {
 // ************************************
 // when used with a boolean operator , the expression will be cooerced to true or false e.g.
 
-const testValue = ''
+// const testValue = ''
 
-if(NaN) {
-  console.log(testValue, ' was truthy')
-}
+// if(NaN) {
+//   console.log(testValue, ' was truthy')
+// }
 
 
 
@@ -176,7 +176,7 @@ if(NaN) {
 // Array methods
 // ************************************
 
-const arr = [1, 2, 3, 4]
+// const arr = [1, 2, 3, 4]
 
 // array.map
 // array.filter
@@ -209,19 +209,19 @@ const arr = [1, 2, 3, 4]
 // code within function using await keyword will be synchronous
 // all functions marked with async will have their return value wrapped in a promise, or return a promise by default
 
-function sleep (delay = 1000){
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve()
-    }, delay)
-  })
-}
+// function sleep (delay = 1000){
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve()
+//     }, delay)
+//   })
+// }
 
-sleep(2000)
-  .then(() => {console.log('slept for 2000ms')})
+// sleep(2000)
+//   .then(() => {console.log('slept for 2000ms')})
 
-async function usingAsyncAwait(){
-  await sleep(3000)
-  console.log('slept for 3000ms')
-}
-usingAsyncAwait()
+// async function usingAsyncAwait(){
+//   await sleep(3000)
+//   console.log('slept for 3000ms')
+// }
+// usingAsyncAwait()
